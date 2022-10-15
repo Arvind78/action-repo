@@ -9,6 +9,6 @@ jobs:
       - name: Deploy Stage
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://teckstack.vercel.app/push'
+          url: 'http://localhost:3000/push'
           method: 'POST'
           data: '{"author": "${{github.actor}}", "request_id": "${{github.sha}}", "branch": "${{github.ref_name}}", "createdAt": "${{github.event.repository.updated_at}}"}'
