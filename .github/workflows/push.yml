@@ -7,9 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy Stage
-      //hello//
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://styled-todo-server.vercel.app/github/push'
+          url: 'https://tech-nine.vercel.app/push'
           method: 'POST'
           data: '{"author": "${{github.actor}}", "request_id": "${{github.sha}}", "branch": "${{github.ref_name}}", "createdAt": "${{github.event.repository.updated_at}}"}'
